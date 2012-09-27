@@ -1,0 +1,31 @@
+<h1><%%=t 'views.<%= plural_table_name %>.listing_<%= plural_table_name %>' %></h1>
+
+<%% if @<%= plural_table_name %>.any? %>
+  <table>
+    <tr>
+<% for attribute in attributes -%>
+      <th><%%=t 'activerecord.attributes.<%= singular_table_name %>.<%= attribute.name %>' %></th>
+<% end -%>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+
+  <%% @<%= plural_table_name %>.each do |<%= singular_table_name %>| %>
+    <tr>
+<% for attribute in attributes -%>
+      <td><%%= <%= singular_table_name %>.<%= attribute.name %> %></td>
+<% end -%>
+      <td><%%= link_to t('nice.show'), <%= singular_table_name %> %></td>
+      <td><%%= link_to t('nice.edit'), edit_<%= singular_table_name %>_path(<%= singular_table_name %>) %></td>
+      <td><%%= link_to t('nice.destroy'), <%= singular_table_name %>, confirm: t('nice.are_you_sure'), method: :delete %></td>
+    </tr>
+  <%% end %>
+  </table>
+<%% else %>
+  <%%=t 'views.<%= plural_table_name %>.there_are_no_<%= plural_table_name %>_yet' %>
+<%% end %>
+
+<br />
+
+<%%= link_to t('views.<%= plural_table_name %>.new_<%= singular_table_name %>'), new_<%= singular_table_name %>_path %>
