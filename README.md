@@ -18,18 +18,37 @@ Run the following command to install some templates and the translation file (`c
 rails generate nice:install
 ```
 
-Generate!
+## Available generators
+
+* `install` generator
+
+```
+rails generate nice:install
+```
+
+This generator was already explained: it allows us to use `nice_generators`.
+
+* `scaffold` generator
 
 ```
 rails generate nice:scaffold article title:string body:text
-rails generate nice:scaffold_controller comment name:string body:text post_id:integer
 ```
+
+It's just like `rails generate scaffold article title:string body:text`, but with some *nice* features.
+
+* `scaffold_controller` generator
+
+```
+rails generate nice:scaffold comment name:string body:text post_id:integer
+```
+
+It's just like `rails generate scaffold_controller article name:string body:text post_id:integer`, but with some *nice* features.
 
 ## Features
 
-* Controllers are refactored
-* Controllers and views are fully i18n'ed
-* Controllers uses `respond_to` and `respond_with`
+* Generated controllers are refactored
+* Generated controllers and views are fully i18n'ed
+* Generated controllers uses `respond_to` and `respond_with`
 
 ## Integration with simple_form
 
