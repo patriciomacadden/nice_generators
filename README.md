@@ -27,7 +27,9 @@ rails generate nice:scaffold_controller comment name:string body:text post_id:in
 
 ## Features
 
-* Controller and views are fully i18n'ed.
+* Controllers are refactored
+* Controllers and views are fully i18n'ed
+* Controllers uses `respond_to` and `respond_with`
 
 ## Integration with simple_form
 
