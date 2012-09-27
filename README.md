@@ -4,21 +4,21 @@ Nice generators for rails 3.
 
 ## Installation
 
-1. Add `nice_generators` to your `Gemfile`:
+Add `nice_generators` to your `Gemfile`:
 
 ```
 gem 'nice_generators'
 ```
 
-2. Install it using `bundle install`
+Install it using `bundle install`
 
-3. Run the following command to install some templates and the translation file (`config/locales/nice.en.yml`):
+Run the following command to install some templates and the translation file (`config/locales/nice.en.yml`):
 
 ```
 rails generate nice:install
 ```
 
-4. Generate!
+Generate!
 
 ```
 rails generate nice:scaffold article title:string body:text
