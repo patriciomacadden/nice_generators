@@ -1,10 +1,11 @@
-es:
+en:
   controllers:
 
   nice:
     are_you_sure: Are you sure?
     back: Back
     edit: Edit
+    error: error
     destroy: Destroy
     show: Show
 
