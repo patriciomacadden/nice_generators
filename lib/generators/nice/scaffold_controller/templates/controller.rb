@@ -5,7 +5,7 @@ class <%= controller_class_name %>Controller < ApplicationController
   # GET <%= route_url %>
   # GET <%= route_url %>.json
   def index
-    @<%= plural_table_name %> = <%= class_name %>.page(params[:page])
+    @<%= plural_table_name %> = <%= class_name %>.all
 
     respond_to do |format|
       format.html # index.html.erb
