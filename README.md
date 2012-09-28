@@ -39,7 +39,7 @@ It's just like `rails generate scaffold article title:string body:text`, but wit
 * `scaffold_controller` generator
 
 ```
-rails generate nice:scaffold comment name:string body:text post_id:integer
+rails generate nice:scaffold_controller comment name:string body:text post_id:integer
 ```
 
 It's just like `rails generate scaffold_controller article name:string body:text post_id:integer`, but with some *nice* features.
