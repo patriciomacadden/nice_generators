@@ -2,6 +2,10 @@
 
 Nice generators for rails 3.
 
+[![Build Status](https://travis-ci.org/patriciomacadden/nice_generators.png)](https://travis-ci.org/patriciomacadden/nice_generators)
+
+[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/patriciomacadden/nice_generators)
+
 ## Installation
 
 Add `nice_generators` to your `Gemfile`:
