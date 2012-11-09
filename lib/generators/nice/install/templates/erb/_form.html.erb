@@ -1,7 +1,7 @@
 <%%= form_for(@<%= singular_table_name %>) do |f| %>
   <%% if @<%= singular_table_name %>.errors.any? %>
     <div id="error_explanation">
-      <h2><%%=t 'views.<%= plural_table_name %>.count_errors_prohibited_this_object_from_being_saved', count_errors: pluralize(@<%= singular_table_name %>.errors.count, t('nice.error')), object: '<%= singular_table_name %>' %></h2>
+      <h2><%%=t 'views.<%= plural_table_name %>.errors', count_errors: pluralize(@<%= singular_table_name %>.errors.count, t('nice.error')), object: '<%= singular_table_name %>' %></h2>
 
       <ul>
       <%% @<%= singular_table_name %>.errors.full_messages.each do |msg| %>

@@ -1,4 +1,4 @@
-<h1><%%=t 'views.<%= plural_table_name %>.listing_<%= plural_table_name %>' %></h1>
+<h1><%%=t 'views.<%= plural_table_name %>.index' %></h1>
 
 <%% if @<%= plural_table_name %>.any? %>
   <table>
@@ -23,9 +23,9 @@
   <%% end %>
   </table>
 <%% else %>
-  <%%=t 'views.<%= plural_table_name %>.there_are_no_<%= plural_table_name %>_yet' %>
+  <%%=t 'views.<%= plural_table_name %>.empty' %>
 <%% end %>
 
 <br />
 
-<%%= link_to t('views.<%= plural_table_name %>.new_<%= singular_table_name %>'), new_<%= singular_table_name %>_path %>
+<%%= link_to t('views.<%= plural_table_name %>.new %>'), new_<%= singular_table_name %>_path %>

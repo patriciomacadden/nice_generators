@@ -32,14 +32,14 @@ class <%= controller_class_name %>Controller < ApplicationController
   # POST <%= route_url %>.json
   def create
     @<%= singular_table_name %> = <%= orm_class.build(class_name, "params[:#{singular_table_name}]") %>
-    flash[:notice] = t('controllers.<%= plural_table_name %>.<%= singular_table_name %>_was_successfully_created') if @<%= orm_instance.save %>
+    flash[:notice] = t('controllers.<%= plural_table_name %>.created') if @<%= orm_instance.save %>
     respond_with @<%= singular_table_name %>
   end
 
   # PUT <%= route_url %>/1
   # PUT <%= route_url %>/1.json
   def update
-    flash[:notice] = t('controllers.<%= plural_table_name %>.<%= singular_table_name %>_was_successfully_updated') if @<%= orm_instance.update_attributes("params[:#{singular_table_name}]") %>
+    flash[:notice] = t('controllers.<%= plural_table_name %>.updated') if @<%= orm_instance.update_attributes("params[:#{singular_table_name}]") %>
     respond_with @<%= singular_table_name %>
   end
 
