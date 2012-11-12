@@ -12,7 +12,8 @@ gem 'nice_generators'
 
 Install it using `bundle install`
 
-Run the following command to install some templates and the translation file (`config/locales/nice.en.yml`):
+Run the following command to install some templates and the translation file
+(`config/locales/nice.en.yml`):
 
 ```
 rails generate nice:install
@@ -27,6 +28,15 @@ rails generate nice:install
 ```
 
 This generator was already explained: it allows us to use `nice_generators`.
+
+* `layout` generator
+
+```
+rails generate nice:layout application
+```
+
+This generator creates a nice layout, similar to the default layout, but
+well-indented and displaying flashes.
 
 * `scaffold` generator
 
@@ -49,6 +59,10 @@ It's just like `rails generate scaffold_controller article name:string body:text
 * Generated controllers are refactored
 * Generated controllers and views are fully i18n'ed
 * Generated controllers uses `respond_to` and `respond_with`
+* Generated views have titles (in rails default scaffold show view has no
+  title)
+* Generated layouts are well-indented
+* Generated layouts displays the flashes
 
 ## Integration with simple_form
 
