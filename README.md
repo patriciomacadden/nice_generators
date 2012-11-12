@@ -36,7 +36,8 @@ rails generate nice:layout application
 ```
 
 This generator creates a nice layout, similar to the default layout, but
-well-indented and displaying flashes.
+well-indented and displaying flashes. In addition, it generates a layout
+helper containing useful methods.
 
 * `scaffold` generator
 
@@ -63,6 +64,9 @@ It's just like `rails generate scaffold_controller article name:string body:text
   title)
 * Generated layouts are well-indented
 * Generated layouts displays the flashes
+* Layout generator also generates a layout helper, which contains useful
+  methods for using in the layout
+* Generated views uses pretty page titles (See this [screencast](http://railscasts.com/episodes/30-pretty-page-title))
 
 ## Integration with simple_form
 

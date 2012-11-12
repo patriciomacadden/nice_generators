@@ -1,0 +1,10 @@
+module LayoutHelper
+  def default_title
+    '<%= camelized %>'
+  end
+
+  def title(title)
+    content_for :title, title
+    title
+  end
+end

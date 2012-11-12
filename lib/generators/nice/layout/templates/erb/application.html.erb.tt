@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= camelized %></title>
+    <title><%%= content_for?(:title) ? yield(:title) : default_title %></title>
     <%%= stylesheet_link_tag 'application', media: 'all' %>
     <%%= javascript_include_tag 'application' %>
     <%%= csrf_meta_tags %>
@@ -9,7 +9,7 @@
   <body>
 
     <%% flash.each do |name, message| %>
-      <div class="<%%= name %>"><%%= message %></div>
+      <div id="<%%= name %>"><%%= message %></div>
     <%% end %>
 
     <%%= yield %>

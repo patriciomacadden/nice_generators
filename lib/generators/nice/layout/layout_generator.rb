@@ -10,6 +10,7 @@ module Nice
         engine = options[:template_engine]
 
         template "#{engine}/application.html.#{engine}.tt", "app/views/layouts/#{file_name}.html.#{engine}"
+        template "layout_helper.rb.tt", "app/helpers/layout_helper.rb"
       end
 
       private

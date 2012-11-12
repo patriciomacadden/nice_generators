@@ -9,5 +9,6 @@ class LayoutGeneratorTest < Rails::Generators::TestCase
     run_generator %w(application)
 
     assert_file 'app/views/layouts/application.html.erb'
+    assert_file 'app/helpers/layout_helper.rb'
   end
 end
