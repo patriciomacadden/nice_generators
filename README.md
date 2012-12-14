@@ -45,7 +45,8 @@ helper containing useful methods.
 rails generate nice:scaffold article title:string body:text
 ```
 
-It's just like `rails generate scaffold article title:string body:text`, but with some *nice* features.
+It's just like `rails generate scaffold article title:string body:text`, but
+with some *nice* features.
 
 * `scaffold_controller` generator
 
@@ -53,7 +54,8 @@ It's just like `rails generate scaffold article title:string body:text`, but wit
 rails generate nice:scaffold_controller comment name:string body:text post_id:integer
 ```
 
-It's just like `rails generate scaffold_controller article name:string body:text post_id:integer`, but with some *nice* features.
+It's just like `rails generate scaffold_controller article name:string body:text post_id:integer`,
+but with some *nice* features.
 
 ## Features
 
@@ -66,7 +68,8 @@ It's just like `rails generate scaffold_controller article name:string body:text
 * Generated layouts displays the flashes
 * Layout generator also generates a layout helper, which contains useful
   methods for using in the layout
-* Generated views uses pretty page titles (See this [screencast](http://railscasts.com/episodes/30-pretty-page-title))
+* Generated views uses pretty page titles (See [Railscasts episode 30](http://railscasts.com/episodes/30-pretty-page-title))
+* [Slim](https://github.com/stonean/slim) support (see below)
 
 ## Integration with simple_form
 
@@ -77,6 +80,29 @@ rails generate nice:install
 rails generate simple_form:install
 ```
 
+## Slim templates
+
+Before you do anything follow these steps:
+
+- Add `slim-rails` gem to your `Gemfile`
+
+```
+gem 'slim-rails'
+gem 'nice_generators'
+```
+
+- `bundle` your gems
+
+- Change the template engine in `config/application.rb`
+
+```ruby
+config.generators do |g|
+  g.template_engine :slim
+end
+```
+
+- start using `nice_generators`
+
 ## Contributing
 
 1. Fork it
@@ -84,3 +110,4 @@ rails generate simple_form:install
 3. Commit your changes (`git commit -am "Added some magic"`)
 4. Push to the branch (`git push origin my_awesome_branch`)
 5. Send pull request
+

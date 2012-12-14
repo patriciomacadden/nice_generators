@@ -1,0 +1,12 @@
+h1 = title t('views.<%= plural_table_name %>.show')
+
+<% attributes.each do |attribute| -%>
+p
+  strong =t 'activerecord.attributes.<%= singular_table_name %>.<%= attribute.name %>'
+  ':
+  = @<%= singular_table_name %>.<%= attribute.name %>
+<% end -%>
+
+= link_to t('nice.edit'), edit_<%= singular_table_name %>_path(@<%= singular_table_name %>)
+' |
+= link_to t('nice.back'), <%= index_helper %>_path

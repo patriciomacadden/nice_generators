@@ -1,0 +1,7 @@
+h1 = title t('views.<%= plural_table_name %>.edit')
+
+== render 'form'
+
+= link_to t('nice.show'), @<%= singular_table_name %>
+' |
+= link_to t('nice.back'), <%= index_helper %>_path

@@ -1,11 +1,10 @@
 <h1><%%= title t('views.<%= plural_table_name %>.show') %></h1>
 
-<% for attribute in attributes -%>
+<% attributes.each do |attribute| -%>
 <p>
   <b><%%=t 'activerecord.attributes.<%= singular_table_name %>.<%= attribute.name %>' %>:</b>
   <%%= @<%= singular_table_name %>.<%= attribute.name %> %>
 </p>
-
 <% end -%>
 
 <%%= link_to t('nice.edit'), edit_<%= singular_table_name %>_path(@<%= singular_table_name %>) %> |

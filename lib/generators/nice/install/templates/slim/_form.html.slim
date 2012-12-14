@@ -1,0 +1,16 @@
+= form_for(@<%= singular_table_name %>) do |f|
+  - if @<%= singular_table_name %>.errors.any?
+    #error_explanation
+      h2 = t 'views.<%= plural_table_name %>.errors', count_errors: pluralize(@<%= singular_table_name %>.errors.count, t('nice.error')), object: '<%= singular_table_name %>'
+
+      ul
+        - @<%= singular_table_name %>.errors.full_messages.each do |msg|
+          li = msg
+
+<% attributes.each do |attribute| -%>
+  .field
+    = f.label :<%= attribute.name %>
+    = f.<%= attribute.field_type %> :<%= attribute.name %>
+<% end -%>
+  .actions
+    = f.submit
