@@ -82,26 +82,13 @@ rails generate simple_form:install
 
 ## Slim templates
 
-Before you do anything follow these steps:
-
-- Add `slim-rails` gem to your `Gemfile`
-
-```
-gem 'slim-rails'
-gem 'nice_generators'
-```
-
-- `bundle` your gems
-
-- Change the template engine in `config/application.rb`
+Change the template engine in `config/application.rb`
 
 ```ruby
 config.generators do |g|
   g.template_engine :slim
 end
 ```
-
-- start using `nice_generators`
 
 ## Contributing
 
