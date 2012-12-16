@@ -3,7 +3,7 @@ require 'test_helper'
 class ScaffoldControllerGeneratorTest < Rails::Generators::TestCase
   tests Nice::Generators::ScaffoldControllerGenerator
   destination File.expand_path('../../tmp', __FILE__)
-  
+
   setup do
     prepare_destination
     Dir.mkdir("#{destination_root}/config") unless File.exists?("#{destination_root}/config")
@@ -12,7 +12,7 @@ class ScaffoldControllerGeneratorTest < Rails::Generators::TestCase
     end
   end
 
-  test 'should create a scaffold controller' do
+  test 'should create a scaffold controller (erb templates)' do
     run_generator %w(person first_name last_name)
 
     assert_file 'app/controllers/people_controller.rb'
@@ -22,5 +22,17 @@ class ScaffoldControllerGeneratorTest < Rails::Generators::TestCase
     assert_file 'app/views/people/index.html.erb'
     assert_file 'app/views/people/new.html.erb'
     assert_file 'app/views/people/show.html.erb'
+  end
+
+  test 'should create a scaffold controller (slim templates)' do
+    run_generator %w(person first_name last_name -e slim)
+
+    assert_file 'app/controllers/people_controller.rb'
+    # app/models/person.rb is created by activerecord
+    assert_file 'app/views/people/_form.html.slim'
+    assert_file 'app/views/people/edit.html.slim'
+    assert_file 'app/views/people/index.html.slim'
+    assert_file 'app/views/people/new.html.slim'
+    assert_file 'app/views/people/show.html.slim'
   end
 end

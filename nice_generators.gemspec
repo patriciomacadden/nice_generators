@@ -19,4 +19,5 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
 
   s.add_dependency 'railties'
+  s.add_dependency 'slim-rails'
 end
